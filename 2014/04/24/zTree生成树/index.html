@@ -45,17 +45,35 @@
   
 
   
+    
+      
+    
 
-  
-
+    
   
 
   
 
   
     
+      
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -68,7 +86,7 @@
 <link href="/blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="zTree," />
 
 
 
@@ -84,13 +102,28 @@
 
 
 
+<meta name="description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
+怎样跟业务结合生成树zTree Api介绍
+setting配置: 配置树展现(树生成时)
+ztree方法: 通过ztree对象提供的方法可以动态修改树
+treeNode: 获取树节点属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FirstBlood">
-<meta property="og:url" content="https://ysm20140508.github.io/blog/2017/02/07/FirstBlood/index.html">
+<meta property="og:title" content="zTree生成树">
+<meta property="og:url" content="https://ysm20140508.github.io/blog/2014/04/24/zTree生成树/index.html">
 <meta property="og:site_name" content="山水淼">
-<meta property="og:updated_time" content="2017-02-07T10:22:13.601Z">
+<meta property="og:description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
+怎样跟业务结合生成树zTree Api介绍
+setting配置: 配置树展现(树生成时)
+ztree方法: 通过ztree对象提供的方法可以动态修改树
+treeNode: 获取树节点属性">
+<meta property="og:updated_time" content="2017-02-08T12:37:01.722Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FirstBlood">
+<meta name="twitter:title" content="zTree生成树">
+<meta name="twitter:description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
+怎样跟业务结合生成树zTree Api介绍
+setting配置: 配置树展现(树生成时)
+ztree方法: 通过ztree对象提供的方法可以动态修改树
+treeNode: 获取树节点属性">
 
 
 
@@ -118,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="https://ysm20140508.github.io/blog/2017/02/07/FirstBlood/"/>
+  <link rel="canonical" href="https://ysm20140508.github.io/blog/2014/04/24/zTree生成树/"/>
 
 
 
 
 
-  <title> FirstBlood | 山水淼 </title>
+  <title> zTree生成树 | 山水淼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://ysm20140508.github.io/blog/blog/2017/02/07/FirstBlood/">
+  <link itemprop="mainEntityOfPage" href="https://ysm20140508.github.io/blog/blog/2014/04/24/zTree生成树/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="姚守淼">
@@ -288,7 +321,7 @@
             
             
               
-                FirstBlood
+                zTree生成树
               
             
           </h1>
@@ -303,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-07T01:05:07+08:00">
-                2017-02-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-04-24T19:25:01+08:00">
+                2014-04-24
               </time>
             
 
@@ -313,6 +346,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开源框架/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开源框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,7 +394,65 @@
       
 
       
-        
+        <h1 id="zTree简介"><a href="#zTree简介" class="headerlink" title="zTree简介"></a>zTree简介</h1><p><a href="http://www.treejs.cn/v3/main.php#_zTreeInfo" target="_blank" rel="external">zTree</a> 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  </p>
+<h1 id="怎样跟业务结合生成树"><a href="#怎样跟业务结合生成树" class="headerlink" title="怎样跟业务结合生成树"></a>怎样跟业务结合生成树</h1><h2 id="zTree-Api介绍"><a href="#zTree-Api介绍" class="headerlink" title="zTree Api介绍"></a>zTree Api介绍</h2><ul>
+<li>setting配置: 配置树展现(树生成时)</li>
+<li>ztree方法: 通过ztree对象提供的方法可以动态修改树</li>
+<li>treeNode: 获取树节点属性  </li>
+</ul>
+<a id="more"></a>  
+<h2 id="zTree实战"><a href="#zTree实战" class="headerlink" title="zTree实战"></a>zTree实战</h2><p>为了生成上图所示的组织树,主要关注三点 </p>
+<ul>
+<li>业务数据怎样组合成ztree所识别的父子级关系 <strong>数据</strong>  </li>
+<li>树展示方式 <strong>展示方式</strong>  </li>
+<li>怎样获取业务数据 <strong>架构</strong></li>
+</ul>
+<h3 id="针对数据-setting配置有项"><a href="#针对数据-setting配置有项" class="headerlink" title="针对数据 setting配置有项"></a>针对<strong>数据</strong> setting配置有项</h3><pre><code class="javascript">data:{
+      <span class="attr">simpleData</span>:{
+                 <span class="attr">enable</span>: <span class="literal">true</span>,
+                 <span class="attr">idKey</span>: <span class="string">"id"</span>,
+                 <span class="attr">pIdKey</span>: <span class="string">"pId"</span>,
+                 <span class="attr">rootPId</span>: <span class="number">0</span>
+                 }
+    }
+</code></pre>
+<p> rootPId:pId为0是根节点<br> pIdKey:父节点id<br> idkey:该节点id<br> 如下:</p>
+<pre><code class="javascript"><span class="keyword">var</span> treeNodes=[
+               {<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"pId"</span>:<span class="number">0</span>,<span class="string">"name"</span>:<span class="string">"test1"</span>},
+               {<span class="string">"id"</span>:<span class="number">11</span>,<span class="string">"pId"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"test11"</span>},
+               {<span class="string">"id"</span>:<span class="number">12</span>,<span class="string">"pId"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"test12"</span>},
+               {<span class="string">"id"</span>:<span class="number">111</span>,<span class="string">"pId"</span>:<span class="number">11</span>,<span class="string">"name"</span>:<span class="string">"test111"</span>}
+              ]
+</code></pre>
+<p> treeNodes对象表示 name为test1为root层节点,test11和test12为test1的子节点 , test111为test11的子节点</p>
+<h3 id="针对展示方式-setting配置"><a href="#针对展示方式-setting配置" class="headerlink" title="针对展示方式 setting配置"></a>针对<strong>展示方式</strong> setting配置</h3><pre><code class="javascript"><span class="keyword">var</span> setting={
+            <span class="attr">check</span>:{
+                  <span class="attr">enable</span>:<span class="literal">true</span>,
+                  <span class="attr">chkStyle</span>:<span class="string">"radio"</span>,
+                  <span class="attr">radioType</span>:<span class="string">"all"</span>
+                  },
+            <span class="attr">view</span>:{
+                  <span class="attr">dbClickExpand</span>:<span class="literal">false</span>,
+                  <span class="attr">showLine</span>:<span class="literal">true</span>,
+                  <span class="attr">selectMulti</span>:<span class="literal">false</span>
+                 }
+            }
+</code></pre>
+<p> check:设置zTree的节点上是否显示checkbox / radio<br> view:用于在节点上固定显示自定义控件 其他配置参考官方文档    </p>
+<h3 id="针对架构"><a href="#针对架构" class="headerlink" title="针对架构"></a>针对<strong>架构</strong></h3><p>前端加载页面 触发ajax异步调用后端接口,获取json数据 初始化zTree树</p>
+<pre><code class="javascript">$.ajax({ 
+        <span class="attr">type</span>:<span class="string">"post"</span>,
+        <span class="attr">url</span>:<span class="string">"/b2b/manage/menuManage/menu/shu"</span>,
+        <span class="attr">dataType</span>:<span class="string">"json"</span>,
+        <span class="attr">success</span>:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{
+                zNode=data;
+                <span class="keyword">var</span> t=$(<span class="string">"#dialog p"</span>)}
+                t = $.fn.zTree.init(t, setting, zNodes);
+                }
+       });
+</code></pre>
+<p>后端先定义对象JsonModel(id,pId,name),然后根据业务生成树关系JsonModel列表 </p>
+
       
     </div>
 
@@ -381,23 +494,13 @@
 
     <footer class="post-footer">
       
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2017/02/07/技术博客/" rel="prev" title="技术博客">
-                技术博客 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
+        <div class="post-tags">
+          
+            <a href="/blog/tags/zTree/" rel="tag"># zTree</a>
+          
         </div>
+      
+
       
 
       
@@ -408,6 +511,12 @@
 
 
     <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2124872" async = "async" ></script>
+</div>
+
       
     </div>
   </div>
@@ -441,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/blog/images/avatar.jpg"
@@ -455,7 +573,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/blog/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -464,7 +582,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/blog/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -473,7 +591,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -518,6 +636,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#zTree简介"><span class="nav-number">1.</span> <span class="nav-text">zTree简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样跟业务结合生成树"><span class="nav-number">2.</span> <span class="nav-text">怎样跟业务结合生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree-Api介绍"><span class="nav-number">2.1.</span> <span class="nav-text">zTree Api介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree实战"><span class="nav-number">2.2.</span> <span class="nav-text">zTree实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#针对数据-setting配置有项"><span class="nav-number">2.2.1.</span> <span class="nav-text">针对数据 setting配置有项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对展示方式-setting配置"><span class="nav-number">2.2.2.</span> <span class="nav-text">针对展示方式 setting配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对架构"><span class="nav-number">2.2.3.</span> <span class="nav-text">针对架构</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
