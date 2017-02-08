@@ -116,7 +116,7 @@ treeNode: 获取树节点属性">
 setting配置: 配置树展现(树生成时)
 ztree方法: 通过ztree对象提供的方法可以动态修改树
 treeNode: 获取树节点属性">
-<meta property="og:updated_time" content="2017-02-08T12:37:01.722Z">
+<meta property="og:updated_time" content="2017-02-08T13:47:21.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zTree生成树">
 <meta name="twitter:description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
@@ -378,6 +378,17 @@ treeNode: 获取树节点属性">
 
           
           
+             <span id="/blog/2014/04/24/zTree生成树/" class="leancloud_visitors" data-flag-title="zTree生成树">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -407,7 +418,7 @@ treeNode: 获取树节点属性">
 <li>树展示方式 <strong>展示方式</strong>  </li>
 <li>怎样获取业务数据 <strong>架构</strong></li>
 </ul>
-<h3 id="针对数据-setting配置有项"><a href="#针对数据-setting配置有项" class="headerlink" title="针对数据 setting配置有项"></a>针对<strong>数据</strong> setting配置有项</h3><pre><code class="javascript">data:{
+<h3 id="针对数据-setting配置"><a href="#针对数据-setting配置" class="headerlink" title="针对数据 setting配置"></a>针对<strong>数据</strong> setting配置</h3><pre><code class="javascript">data:{
       <span class="attr">simpleData</span>:{
                  <span class="attr">enable</span>: <span class="literal">true</span>,
                  <span class="attr">idKey</span>: <span class="string">"id"</span>,
@@ -445,7 +456,8 @@ treeNode: 获取树节点属性">
         <span class="attr">url</span>:<span class="string">"/b2b/manage/menuManage/menu/shu"</span>,
         <span class="attr">dataType</span>:<span class="string">"json"</span>,
         <span class="attr">success</span>:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{
-                zNode=data;
+
+                zNodes=data;
                 <span class="keyword">var</span> t=$(<span class="string">"#dialog p"</span>)}
                 t = $.fn.zTree.init(t, setting, zNodes);
                 }
@@ -646,7 +658,7 @@ treeNode: 获取树节点属性">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#zTree简介"><span class="nav-number">1.</span> <span class="nav-text">zTree简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样跟业务结合生成树"><span class="nav-number">2.</span> <span class="nav-text">怎样跟业务结合生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree-Api介绍"><span class="nav-number">2.1.</span> <span class="nav-text">zTree Api介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree实战"><span class="nav-number">2.2.</span> <span class="nav-text">zTree实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#针对数据-setting配置有项"><span class="nav-number">2.2.1.</span> <span class="nav-text">针对数据 setting配置有项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对展示方式-setting配置"><span class="nav-number">2.2.2.</span> <span class="nav-text">针对展示方式 setting配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对架构"><span class="nav-number">2.2.3.</span> <span class="nav-text">针对架构</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#zTree简介"><span class="nav-number">1.</span> <span class="nav-text">zTree简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样跟业务结合生成树"><span class="nav-number">2.</span> <span class="nav-text">怎样跟业务结合生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree-Api介绍"><span class="nav-number">2.1.</span> <span class="nav-text">zTree Api介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree实战"><span class="nav-number">2.2.</span> <span class="nav-text">zTree实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#针对数据-setting配置"><span class="nav-number">2.2.1.</span> <span class="nav-text">针对数据 setting配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对展示方式-setting配置"><span class="nav-number">2.2.2.</span> <span class="nav-text">针对展示方式 setting配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对架构"><span class="nav-number">2.2.3.</span> <span class="nav-text">针对架构</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -801,6 +813,113 @@ treeNode: 获取树节点属性">
   
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("qhqDeuziTBV7W5a7ymoLBO3s-gzGzoHsz", "TGc9VpvvFAg7K42U8JIETHzU");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
