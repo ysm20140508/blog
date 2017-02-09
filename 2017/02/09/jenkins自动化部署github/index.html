@@ -86,7 +86,7 @@
 <link href="/blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="zTree," />
+  <meta name="keywords" content="jenkins部署github," />
 
 
 
@@ -102,28 +102,34 @@
 
 
 
-<meta name="description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
-怎样跟业务结合生成树zTree Api介绍
-setting配置: 配置树展现(树生成时)
-ztree方法: 通过ztree对象提供的方法可以动态修改树
-treeNode: 获取树节点属性">
+<meta name="description" content="jenkins安装请参考linux部署这篇博客  
+安装github插件
+登录jenkins管理后台&amp;emsp;选中左边菜单系统管理&amp;emsp;管理插件  
+选中可选插件&amp;emsp;过滤github &amp;emsp;选中插件&amp;emsp;直接安装  
+
+全局工具配置(Global Tool Configuratio)
+jdk配置    &amp;emsp;别名: jdk名称   &amp;emsp;JAVA_HOME:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="zTree生成树">
-<meta property="og:url" content="https://ysm20140508.github.io/blog/2014/04/24/zTree生成树/index.html">
+<meta property="og:title" content="jenkins自动化部署github">
+<meta property="og:url" content="https://ysm20140508.github.io/blog/2017/02/09/jenkins自动化部署github/index.html">
 <meta property="og:site_name" content="山水淼">
-<meta property="og:description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
-怎样跟业务结合生成树zTree Api介绍
-setting配置: 配置树展现(树生成时)
-ztree方法: 通过ztree对象提供的方法可以动态修改树
-treeNode: 获取树节点属性">
-<meta property="og:updated_time" content="2017-02-08T13:47:21.679Z">
+<meta property="og:description" content="jenkins安装请参考linux部署这篇博客  
+安装github插件
+登录jenkins管理后台&amp;emsp;选中左边菜单系统管理&amp;emsp;管理插件  
+选中可选插件&amp;emsp;过滤github &amp;emsp;选中插件&amp;emsp;直接安装  
+
+全局工具配置(Global Tool Configuratio)
+jdk配置    &amp;emsp;别名: jdk名称   &amp;emsp;JAVA_HOME:">
+<meta property="og:updated_time" content="2017-02-09T10:03:07.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zTree生成树">
-<meta name="twitter:description" content="zTree简介zTree 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  
-怎样跟业务结合生成树zTree Api介绍
-setting配置: 配置树展现(树生成时)
-ztree方法: 通过ztree对象提供的方法可以动态修改树
-treeNode: 获取树节点属性">
+<meta name="twitter:title" content="jenkins自动化部署github">
+<meta name="twitter:description" content="jenkins安装请参考linux部署这篇博客  
+安装github插件
+登录jenkins管理后台&amp;emsp;选中左边菜单系统管理&amp;emsp;管理插件  
+选中可选插件&amp;emsp;过滤github &amp;emsp;选中插件&amp;emsp;直接安装  
+
+全局工具配置(Global Tool Configuratio)
+jdk配置    &amp;emsp;别名: jdk名称   &amp;emsp;JAVA_HOME:">
 
 
 
@@ -151,13 +157,13 @@ treeNode: 获取树节点属性">
 
 
 
-  <link rel="canonical" href="https://ysm20140508.github.io/blog/2014/04/24/zTree生成树/"/>
+  <link rel="canonical" href="https://ysm20140508.github.io/blog/2017/02/09/jenkins自动化部署github/"/>
 
 
 
 
 
-  <title> zTree生成树 | 山水淼 </title>
+  <title> jenkins自动化部署github | 山水淼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -297,7 +303,7 @@ treeNode: 获取树节点属性">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://ysm20140508.github.io/blog/blog/2014/04/24/zTree生成树/">
+  <link itemprop="mainEntityOfPage" href="https://ysm20140508.github.io/blog/blog/2017/02/09/jenkins自动化部署github/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="姚守淼">
@@ -321,7 +327,7 @@ treeNode: 获取树节点属性">
             
             
               
-                zTree生成树
+                jenkins自动化部署github
               
             
           </h1>
@@ -336,8 +342,8 @@ treeNode: 获取树节点属性">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-04-24T19:25:01+08:00">
-                2014-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T17:38:15+08:00">
+                2017-02-09
               </time>
             
 
@@ -359,8 +365,8 @@ treeNode: 获取树节点属性">
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/前端开源框架/" itemprop="url" rel="index">
-                    <span itemprop="name">前端开源框架</span>
+                  <a href="/blog/categories/linux部署/" itemprop="url" rel="index">
+                    <span itemprop="name">linux部署</span>
                   </a>
                 </span>
 
@@ -378,7 +384,7 @@ treeNode: 获取树节点属性">
 
           
           
-             <span id="/blog/2014/04/24/zTree生成树/" class="leancloud_visitors" data-flag-title="zTree生成树">
+             <span id="/blog/2017/02/09/jenkins自动化部署github/" class="leancloud_visitors" data-flag-title="jenkins自动化部署github">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -405,65 +411,28 @@ treeNode: 获取树节点属性">
       
 
       
-        <h1 id="zTree简介"><a href="#zTree简介" class="headerlink" title="zTree简介"></a>zTree简介</h1><p><a href="http://www.treejs.cn/v3/main.php#_zTreeInfo" target="_blank" rel="external">zTree</a> 是一个依靠 jQuery 实现的多功能树插件.优异的性能,灵活的配置,多种功能的组合是 zTree 最大优点.  </p>
-<h1 id="怎样跟业务结合生成树"><a href="#怎样跟业务结合生成树" class="headerlink" title="怎样跟业务结合生成树"></a>怎样跟业务结合生成树</h1><h2 id="zTree-Api介绍"><a href="#zTree-Api介绍" class="headerlink" title="zTree Api介绍"></a>zTree Api介绍</h2><ul>
-<li>setting配置: 配置树展现(树生成时)</li>
-<li>ztree方法: 通过ztree对象提供的方法可以动态修改树</li>
-<li>treeNode: 获取树节点属性  </li>
+        <h1 id="jenkins安装"><a href="#jenkins安装" class="headerlink" title="jenkins安装"></a>jenkins安装</h1><p>请参考<a href="/blog/2017/02/09/linux%E9%83%A8%E7%BD%B2/">linux部署</a>这篇博客  </p>
+<h1 id="安装github插件"><a href="#安装github插件" class="headerlink" title="安装github插件"></a>安装github插件</h1><ul>
+<li>登录jenkins管理后台&emsp;选中左边菜单<strong>系统管理</strong>&emsp;<strong>管理插件</strong>  </li>
+<li>选中<strong>可选插件</strong>&emsp;过滤github &emsp;选中插件&emsp;<strong>直接安装</strong>  </li>
 </ul>
-<a id="more"></a>  
-<h2 id="zTree实战"><a href="#zTree实战" class="headerlink" title="zTree实战"></a>zTree实战</h2><p>为了生成上图所示的组织树,主要关注三点 </p>
-<ul>
-<li>业务数据怎样组合成ztree所识别的父子级关系 <strong>数据</strong>  </li>
-<li>树展示方式 <strong>展示方式</strong>  </li>
-<li>怎样获取业务数据 <strong>架构</strong></li>
+<h1 id="全局工具配置-Global-Tool-Configuratio"><a href="#全局工具配置-Global-Tool-Configuratio" class="headerlink" title="全局工具配置(Global Tool Configuratio)"></a>全局工具配置(<strong>Global Tool Configuratio</strong>)</h1><ul>
+<li>jdk配置    &emsp;<strong>别名</strong>: jdk名称   &emsp;<strong>JAVA_HOME</strong>: jdk路径  </li>
+<li>maven配置  &emsp;<strong>Name</strong>: maven名称 &emsp;<strong>MAVEN_HOME</strong>: maven路径</li>
 </ul>
-<h3 id="针对数据-setting配置"><a href="#针对数据-setting配置" class="headerlink" title="针对数据 setting配置"></a>针对<strong>数据</strong> setting配置</h3><pre><code class="javascript">data:{
-      <span class="attr">simpleData</span>:{
-                 <span class="attr">enable</span>: <span class="literal">true</span>,
-                 <span class="attr">idKey</span>: <span class="string">"id"</span>,
-                 <span class="attr">pIdKey</span>: <span class="string">"pId"</span>,
-                 <span class="attr">rootPId</span>: <span class="number">0</span>
-                 }
-    }
-</code></pre>
-<p> rootPId:pId为0是根节点<br> pIdKey:父节点id<br> idkey:该节点id<br> 如下:</p>
-<pre><code class="javascript"><span class="keyword">var</span> treeNodes=[
-               {<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"pId"</span>:<span class="number">0</span>,<span class="string">"name"</span>:<span class="string">"test1"</span>},
-               {<span class="string">"id"</span>:<span class="number">11</span>,<span class="string">"pId"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"test11"</span>},
-               {<span class="string">"id"</span>:<span class="number">12</span>,<span class="string">"pId"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"test12"</span>},
-               {<span class="string">"id"</span>:<span class="number">111</span>,<span class="string">"pId"</span>:<span class="number">11</span>,<span class="string">"name"</span>:<span class="string">"test111"</span>}
-              ]
-</code></pre>
-<p> treeNodes对象表示 name为test1为root层节点,test11和test12为test1的子节点 , test111为test11的子节点</p>
-<h3 id="针对展示方式-setting配置"><a href="#针对展示方式-setting配置" class="headerlink" title="针对展示方式 setting配置"></a>针对<strong>展示方式</strong> setting配置</h3><pre><code class="javascript"><span class="keyword">var</span> setting={
-            <span class="attr">check</span>:{
-                  <span class="attr">enable</span>:<span class="literal">true</span>,
-                  <span class="attr">chkStyle</span>:<span class="string">"radio"</span>,
-                  <span class="attr">radioType</span>:<span class="string">"all"</span>
-                  },
-            <span class="attr">view</span>:{
-                  <span class="attr">dbClickExpand</span>:<span class="literal">false</span>,
-                  <span class="attr">showLine</span>:<span class="literal">true</span>,
-                  <span class="attr">selectMulti</span>:<span class="literal">false</span>
-                 }
-            }
-</code></pre>
-<p> check:设置zTree的节点上是否显示checkbox / radio<br> view:用于在节点上固定显示自定义控件 其他配置参考官方文档    </p>
-<h3 id="针对架构"><a href="#针对架构" class="headerlink" title="针对架构"></a>针对<strong>架构</strong></h3><p>前端加载页面 触发ajax异步调用后端接口,获取json数据 初始化zTree树</p>
-<pre><code class="javascript">$.ajax({ 
-        <span class="attr">type</span>:<span class="string">"post"</span>,
-        <span class="attr">url</span>:<span class="string">"/b2b/manage/menuManage/menu/shu"</span>,
-        <span class="attr">dataType</span>:<span class="string">"json"</span>,
-        <span class="attr">success</span>:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{
-
-                zNodes=data;
-                <span class="keyword">var</span> t=$(<span class="string">"#dialog p"</span>)}
-                t = $.fn.zTree.init(t, setting, zNodes);
-                }
-       });
-</code></pre>
-<p>后端先定义对象JsonModel(id,pId,name),然后根据业务生成树关系JsonModel列表 </p>
+<a id="more"></a>
+<h1 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h1><ul>
+<li>选中<strong>General</strong>下的[<strong>Github project</strong>]  </li>
+<li><strong>Project url</strong>: <a href="https://github.com/ysm20140508/fundCrawLer/" target="_blank" rel="external">https://github.com/ysm20140508/fundCrawLer/</a>  </li>
+<li>选中<strong>源码管理</strong>下的[<strong>Git</strong>] </li>
+<li><strong>Repository URL</strong>:<a href="https://github.com/ysm20140508/fundCrawLer/" target="_blank" rel="external">https://github.com/ysm20140508/fundCrawLer/</a>]</li>
+<li><strong>Credentials</strong>:认证</li>
+<li><strong>Branches to build</strong>:*/master</li>
+<li>选中<strong>构建触发器</strong>下的[Build when a change is pushed to Github]</li>
+<li>选中<strong>构建环境</strong>下的[Add timestamps to the Console Output]</li>
+<li>选中<strong>构建</strong>下的[invoke top-level Maven targets] &emsp;<strong>Maven Version</strong>: maven名称  &emsp; <strong>Goals</strong>: clean pack</li>
+<li>选中<strong>构建</strong>下的[Execute shell] &emsp;<strong>Command</strong>: BUILD_ID=dontKillMe  &emsp; java -jar target/fundCrawler-1.0.jar &amp;</li>
+</ul>
 
       
     </div>
@@ -508,7 +477,7 @@ treeNode: 获取树节点属性">
       
         <div class="post-tags">
           
-            <a href="/blog/tags/zTree/" rel="tag"># zTree</a>
+            <a href="/blog/tags/jenkins部署github/" rel="tag"># jenkins部署github</a>
           
         </div>
       
@@ -517,15 +486,15 @@ treeNode: 获取树节点属性">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2017/02/09/linux部署/" rel="next" title="linux部署">
+                <i class="fa fa-chevron-left"></i> linux部署
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2017/02/09/linux部署/" rel="prev" title="linux部署">
-                linux部署 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -674,7 +643,7 @@ treeNode: 获取树节点属性">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#zTree简介"><span class="nav-number">1.</span> <span class="nav-text">zTree简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样跟业务结合生成树"><span class="nav-number">2.</span> <span class="nav-text">怎样跟业务结合生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree-Api介绍"><span class="nav-number">2.1.</span> <span class="nav-text">zTree Api介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zTree实战"><span class="nav-number">2.2.</span> <span class="nav-text">zTree实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#针对数据-setting配置"><span class="nav-number">2.2.1.</span> <span class="nav-text">针对数据 setting配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对展示方式-setting配置"><span class="nav-number">2.2.2.</span> <span class="nav-text">针对展示方式 setting配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对架构"><span class="nav-number">2.2.3.</span> <span class="nav-text">针对架构</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jenkins安装"><span class="nav-number">1.</span> <span class="nav-text">jenkins安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装github插件"><span class="nav-number">2.</span> <span class="nav-text">安装github插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局工具配置-Global-Tool-Configuratio"><span class="nav-number">3.</span> <span class="nav-text">全局工具配置(Global Tool Configuratio)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建任务"><span class="nav-number">4.</span> <span class="nav-text">创建任务</span></a></li></ol></div>
             
 
           </div>
