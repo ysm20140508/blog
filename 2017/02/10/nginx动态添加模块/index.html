@@ -104,23 +104,20 @@
 
 <meta name="description" content="说明已经安装好的nginx，需要添加一个未被编译安装的模块，需要怎么弄呢? 这里以安装ngx_cache_purge为例  
 
-获取module包
-查看nginx安装configure信息1/home/coder/nginx/nginx-configure/sbin/nginx -V">
+获取module包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx动态添加模块">
 <meta property="og:url" content="https://ysm20140508.github.io/blog/2017/02/10/nginx动态添加模块/index.html">
 <meta property="og:site_name" content="山水淼">
 <meta property="og:description" content="说明已经安装好的nginx，需要添加一个未被编译安装的模块，需要怎么弄呢? 这里以安装ngx_cache_purge为例  
 
-获取module包
-查看nginx安装configure信息1/home/coder/nginx/nginx-configure/sbin/nginx -V">
-<meta property="og:updated_time" content="2017-02-10T10:33:54.246Z">
+获取module包">
+<meta property="og:updated_time" content="2017-02-10T10:38:16.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx动态添加模块">
 <meta name="twitter:description" content="说明已经安装好的nginx，需要添加一个未被编译安装的模块，需要怎么弄呢? 这里以安装ngx_cache_purge为例  
 
-获取module包
-查看nginx安装configure信息1/home/coder/nginx/nginx-configure/sbin/nginx -V">
+获取module包">
 
 
 
@@ -404,12 +401,10 @@
       
         <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>已经安装好的nginx，需要添加一个未被编译安装的模块，需要怎么弄呢? 这里以安装ngx_cache_purge为例  </p>
 <ul>
-<li><a href="wget http://labs.frickle.com/files/ngx_cache_purge-2.1.tar.gz">获取module包</a></li>
-<li>查看nginx安装configure信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/home/coder/nginx/nginx-configure/sbin/nginx -V</div></pre></td></tr></table></figure>
+<li><a href="wget http://labs.frickle.com/files/ngx_cache_purge-2.1.tar.gz">获取module包</a><a id="more"></a></li>
+<li><p>查看nginx安装configure信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/home/coder/nginx/nginx-configure/sbin/nginx -V</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<a id="more"></a>
-<ul>
 <li><p>重新编译 <strong>安装configure信息加上module</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --prefix=/home/coder/nginx/nginx-configure --add-module=../ngx_cache_purge-2.1</div></pre></td></tr></table></figure>
 </li>
