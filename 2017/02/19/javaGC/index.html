@@ -86,7 +86,7 @@
 <link href="/blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jdk,maven,mysql,nginx,jenkis,elasticsearch," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -102,31 +102,34 @@
 
 
 
-<meta name="description" content="elasticsearch
-设置jdk环境变量
-下载官网包,解压
-修改config目录下 elasticsearch.yml文件network.host配置为0.0.0.0  不然本地访问不了虚拟机的es
-bin目录下 ./elasticsearch -d  启动es
-ip:9200 访问es">
+<meta name="description" content="一想到GC(垃圾回收),伴随着3个疑问
+何时触发GC
+哪些内存要被GC
+怎样回收这些内存  
+
+何时触发GC以堆为例: 随着程序运行,java堆被占用的内存越来越多,内存不够分配一个对象实例时,JVM会触发GC,清理掉死数据内存
+哪些内存被GC引用计数算法这算法基本思路是: 给对象中添加一个引用计数器,每当有一个地方引用它时,计数器就加1;当引用失效时,计数器值就减1;任何时刻计数器为0的对象就是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux部署">
-<meta property="og:url" content="https://ysm20140508.github.io/blog/2017/02/09/linux部署/index.html">
+<meta property="og:title" content="javaGC">
+<meta property="og:url" content="https://ysm20140508.github.io/blog/2017/02/19/javaGC/index.html">
 <meta property="og:site_name" content="山水淼">
-<meta property="og:description" content="elasticsearch
-设置jdk环境变量
-下载官网包,解压
-修改config目录下 elasticsearch.yml文件network.host配置为0.0.0.0  不然本地访问不了虚拟机的es
-bin目录下 ./elasticsearch -d  启动es
-ip:9200 访问es">
-<meta property="og:updated_time" content="2017-02-09T10:08:49.481Z">
+<meta property="og:description" content="一想到GC(垃圾回收),伴随着3个疑问
+何时触发GC
+哪些内存要被GC
+怎样回收这些内存  
+
+何时触发GC以堆为例: 随着程序运行,java堆被占用的内存越来越多,内存不够分配一个对象实例时,JVM会触发GC,清理掉死数据内存
+哪些内存被GC引用计数算法这算法基本思路是: 给对象中添加一个引用计数器,每当有一个地方引用它时,计数器就加1;当引用失效时,计数器值就减1;任何时刻计数器为0的对象就是">
+<meta property="og:updated_time" content="2017-02-18T19:51:22.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux部署">
-<meta name="twitter:description" content="elasticsearch
-设置jdk环境变量
-下载官网包,解压
-修改config目录下 elasticsearch.yml文件network.host配置为0.0.0.0  不然本地访问不了虚拟机的es
-bin目录下 ./elasticsearch -d  启动es
-ip:9200 访问es">
+<meta name="twitter:title" content="javaGC">
+<meta name="twitter:description" content="一想到GC(垃圾回收),伴随着3个疑问
+何时触发GC
+哪些内存要被GC
+怎样回收这些内存  
+
+何时触发GC以堆为例: 随着程序运行,java堆被占用的内存越来越多,内存不够分配一个对象实例时,JVM会触发GC,清理掉死数据内存
+哪些内存被GC引用计数算法这算法基本思路是: 给对象中添加一个引用计数器,每当有一个地方引用它时,计数器就加1;当引用失效时,计数器值就减1;任何时刻计数器为0的对象就是">
 
 
 
@@ -154,13 +157,13 @@ ip:9200 访问es">
 
 
 
-  <link rel="canonical" href="https://ysm20140508.github.io/blog/2017/02/09/linux部署/"/>
+  <link rel="canonical" href="https://ysm20140508.github.io/blog/2017/02/19/javaGC/"/>
 
 
 
 
 
-  <title> linux部署 | 山水淼 </title>
+  <title> javaGC | 山水淼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -300,7 +303,7 @@ ip:9200 访问es">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://ysm20140508.github.io/blog/blog/2017/02/09/linux部署/">
+  <link itemprop="mainEntityOfPage" href="https://ysm20140508.github.io/blog/blog/2017/02/19/javaGC/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="姚守淼">
@@ -324,7 +327,7 @@ ip:9200 访问es">
             
             
               
-                linux部署
+                javaGC
               
             
           </h2>
@@ -339,8 +342,8 @@ ip:9200 访问es">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T00:47:02+08:00">
-                2017-02-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-19T03:07:20+08:00">
+                2017-02-19
               </time>
             
 
@@ -362,8 +365,8 @@ ip:9200 访问es">
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/blog/categories/深入理解java虚拟机/" itemprop="url" rel="index">
+                    <span itemprop="name">深入理解java虚拟机</span>
                   </a>
                 </span>
 
@@ -381,7 +384,7 @@ ip:9200 访问es">
 
           
           
-             <span id="/blog/2017/02/09/linux部署/" class="leancloud_visitors" data-flag-title="linux部署">
+             <span id="/blog/2017/02/19/javaGC/" class="leancloud_visitors" data-flag-title="javaGC">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,70 +411,37 @@ ip:9200 访问es">
       
 
       
-        <h1 id="elasticsearch"><a href="#elasticsearch" class="headerlink" title="elasticsearch"></a>elasticsearch</h1><ul>
-<li>设置jdk环境变量</li>
-<li><a href="https://www.elastic.co/downloads/elasticsearch" target="_blank" rel="external">下载官网包</a>,解压</li>
-<li>修改config目录下 elasticsearch.yml文件network.host配置为0.0.0.0  不然本地访问不了虚拟机的es</li>
-<li>bin目录下 ./elasticsearch -d  启动es</li>
-<li>ip:9200 访问es</li>
-</ul>
+        <h1 id="一想到GC-垃圾回收-伴随着3个疑问"><a href="#一想到GC-垃圾回收-伴随着3个疑问" class="headerlink" title="一想到GC(垃圾回收),伴随着3个疑问"></a>一想到GC(垃圾回收),伴随着3个疑问</h1><ol>
+<li>何时触发GC</li>
+<li>哪些内存要被GC</li>
+<li>怎样回收这些内存  </li>
+</ol>
+<h1 id="何时触发GC"><a href="#何时触发GC" class="headerlink" title="何时触发GC"></a>何时触发GC</h1><p>以堆为例: 随着程序运行,java堆被占用的内存越来越多,内存不够分配一个对象实例时,JVM会触发GC,清理掉死数据内存</p>
+<h1 id="哪些内存被GC"><a href="#哪些内存被GC" class="headerlink" title="哪些内存被GC"></a>哪些内存被GC</h1><h2 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h2><p>这算法基本思路是: 给对象中添加一个引用计数器,每当有一个地方引用它时,计数器就加1;当引用失效时,计数器值就减1;<br>任何时刻计数器为0的对象就是不可能再被使用的,将会被GC. 引用计数算法的实现简单,判定效率也很高,但很难解决对象<br>之间互相循环引用的问题  </p>
 <a id="more"></a>
-<h1 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h1><ul>
-<li><p>安装包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo  </div><div class="line">sudo rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key  </div><div class="line">yum install jenkins</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改jenkis配置文件(不配置 导致找不到java执行目录或者权限不够)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/etc/sysconfig/jenkins   JENKINS_USER=&quot;root&quot;  </div><div class="line">/etc/sysconfig/jenkins   JENKINS_JAVA_CMD=&quot;java_path/bin/java&quot;   </div><div class="line">或 /etc/init.d/jenkins candidates=java_path/bin/java</div></pre></td></tr></table></figure>
-</li>
-<li><p>service jenkins start (记得重启几次)</p>
-</li>
-<li><p>验证码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /var/lib/jenkins/secrets/initialAdminPassword</div></pre></td></tr></table></figure>
-</li>
-<li><p>选择安装推荐的插件选项  </p>
-</li>
+<h2 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h2><p>这算法基本思路是: 通过一序列的称为”GC Roots”的对象作为起始点,从这些节点开始向下搜索,搜索所走过的路径称为引<br>用链,当一个对象到GC Roots没有任何引用链相连时,则证明此对象是不可用的,将会被GC<br>在java语言中,可作为GC Roots的对象包括下面几种  </p>
+<ul>
+<li>虚拟机栈(栈帧中的本地变量表)中引用的对象</li>
+<li>方法区中类静态属性引用的对象</li>
+<li>方法区中常量引用的对象</li>
+<li>本地方法栈中JNI(即一般说的Native方法)引用的对象  </li>
 </ul>
-<!-- more -->
-<h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><ul>
-<li>下载包 <a href="https://nginx.org/en/download.html" target="_blank" rel="external">下载地址</a></li>
-<li><p>安装编译工具及库文件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./configure  --prefix=/home/coder/nginx/nginx-configure (安装文件默认放在/usr/local/nginx)</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-</li>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>无论是通过引用计数算法判断对象的引用数量,还是通过可达性分析算法判断对象的引用链是否可达,判断对象是否存活都<br>与”引用”有关.我们希望描述这样一类对象:当内存空间还足够是,则能保留在内存之中,如果内存空间在进行垃圾收集后还<br>是非常紧张,则可以抛弃这些对象,在jdk1.2之后,java对引用的概念进行了扩充,讲引用分为强引用,软引用,弱应用<br>虚引用4种</p>
+<ul>
+<li>强引用就是指在程序代码之中普遍存在的,类似 “Object object=new Object”这类的引用,只要强引用还存在,垃圾收器<br>永远不会回收掉被引用的对象</li>
+<li>软引用是用来描述一些还有用但并非必须的对象,在系统将要发生内存溢出异常之前,将会把这些对象列进回收范围之中<br>进行第二次回收.如果这次回收还没足够的内存,才会抛出内存溢出异常</li>
+<li>弱引用也是用来描述非必需对象的,但是它的强度比软引用更弱一些,被弱引用关联的对象只能生成到下一次垃圾收集发<br>送之前.当垃圾收集器工作时,无论当前内存是否足够,都会回收掉只被弱应用关联的对象</li>
+<li>虚引用也称为幽灵引用或幻影引用,它时最弱的一种引用关系.一个对象是否有虚引用的存在,完全不会对其生存时间构<br>成影响,也无通过虚引用来取得一个对象实例. </li>
 </ul>
-<!-- more -->
-<h1 id="jdk"><a href="#jdk" class="headerlink" title="jdk"></a>jdk</h1><ul>
-<li>jdk下载地址  <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> 下载解压</li>
-<li><p>设置环境变量 /etc/profile  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=jdk_home </div><div class="line">export PATH=$JAVA_HOME/bin:$PATH  </div><div class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</div></pre></td></tr></table></figure>
-</li>
-<li><p>source /etc/profile  </p>
-</li>
+<h2 id="生存还是死亡"><a href="#生存还是死亡" class="headerlink" title="生存还是死亡"></a>生存还是死亡</h2><p>即使在可达性分析算法中不可达的对象,也并非”非死不可”的,这时候它们暂时处于”缓刑”阶段,要真正宣告一个对象死亡<br>,至少要经历两次标记过程:如果对象在进行可达性分析后发现没有与GC Roots相连接的引用链,那它将会被第一次标记并<br>且进行一次筛选,筛选的条件是此对象是否有必要finalize()方法.可以在finalize()方法使对象跟GC Roots相链接,自救</p>
+<h1 id="怎样回收这些内存"><a href="#怎样回收这些内存" class="headerlink" title="怎样回收这些内存"></a>怎样回收这些内存</h1><h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><h3 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h3><p>算法分为标记和清除两个阶段:首先标记出所有需要回收的对象,在标记完成后统一回收所有被标记的对象<br>主要有两个不足</p>
+<ul>
+<li>标记和清除两个过程的效率不高</li>
+<li>标记清除之后会产生大量不连续的内存碎片,空间碎片太多可能会导致以后再程序运行过程中需要分配大对象时,无法找<br>到足够的连续内存而不得不提前触发另一次垃圾收集动作  </li>
 </ul>
-<h1 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h1><ul>
-<li>maven下载地址 <a href="https://maven.apache.org/download.cgi" target="_blank" rel="external">https://maven.apache.org/download.cgi</a> 下载 解压</li>
-<li><p>设置环境变量 /etc/profile</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export MAVEN_HOME=/home/coder/maven/apache-maven-3.3.9  </div><div class="line">export PATH=$&#123;PATH&#125;:$&#123;MAVEN_HOME&#125;/bin</div></pre></td></tr></table></figure>
-</li>
-<li><p>source /etc/profile  </p>
-</li>
-</ul>
-<h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><ul>
-<li>下载rpm wget <a href="http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm" target="_blank" rel="external">http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</a></li>
-<li>sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm</li>
-<li>sudo yum install mysql-server</li>
-<li><p>登录mysql 修改密码  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p;    </div><div class="line">use mysql;  </div><div class="line">update user set password=password(&apos;123456&apos;) where user=&apos;root&apos;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>允许ip访问</p>
-<pre><code class="shell">use mysql;  
-update user set host = &apos;%&apos;  where user =&apos;root&apos;;  
-flush privileges;
-</code></pre>
-</li>
-</ul>
+<h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><p>将可用内存按容量划分大小相等的两块,每次只使用其中的一块.当这一块的内存用完了.就将还存活着的对象复制到另外一<br>块上面,然后再把已使用过的内存空间溢出清理掉</p>
+<h3 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h3><p>复制收集算法在对象存活率较高时就要进行较多的复制操作,效率将会变低.根据老年代的特点,有人提出了另外一种”标记<br>-整理”算法,标记过程与”标记-清除”算法一样,但后续步骤不是直接对可回收对象进行清理,而是让所有存活的对象都向一<br>端移动</p>
+<h3 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h3><p>在新生代中,每次垃圾收集是都发现有大批对象死去,只有少量存活,那就选用复制算法,只需要付出少量存活对象的复制成<br>本就可以完成收集.而老年代中因为对象存活率高,没有额外空间对它进行分配担保,就必须使用”标记-清理”或者”标记-整<br>理”算法来进行回收</p>
 
       
     </div>
@@ -514,29 +484,13 @@ flush privileges;
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/blog/tags/jdk/" rel="tag"># jdk</a>
-          
-            <a href="/blog/tags/maven/" rel="tag"># maven</a>
-          
-            <a href="/blog/tags/mysql/" rel="tag"># mysql</a>
-          
-            <a href="/blog/tags/nginx/" rel="tag"># nginx</a>
-          
-            <a href="/blog/tags/jenkis/" rel="tag"># jenkis</a>
-          
-            <a href="/blog/tags/elasticsearch/" rel="tag"># elasticsearch</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2014/04/24/zTree生成树/" rel="next" title="zTree生成树">
-                <i class="fa fa-chevron-left"></i> zTree生成树
+              <a href="/blog/2017/02/16/JDK命令行/" rel="next" title="JDK命令行">
+                <i class="fa fa-chevron-left"></i> JDK命令行
               </a>
             
           </div>
@@ -544,10 +498,6 @@ flush privileges;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2017/02/09/jenkins自动化部署github/" rel="prev" title="jenkins自动化部署github">
-                jenkins自动化部署github <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -696,7 +646,7 @@ flush privileges;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#elasticsearch"><span class="nav-number">1.</span> <span class="nav-text">elasticsearch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jenkins"><span class="nav-number">2.</span> <span class="nav-text">jenkins</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx"><span class="nav-number">3.</span> <span class="nav-text">nginx</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jdk"><span class="nav-number">4.</span> <span class="nav-text">jdk</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#maven"><span class="nav-number">5.</span> <span class="nav-text">maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql"><span class="nav-number">6.</span> <span class="nav-text">mysql</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一想到GC-垃圾回收-伴随着3个疑问"><span class="nav-number">1.</span> <span class="nav-text">一想到GC(垃圾回收),伴随着3个疑问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#何时触发GC"><span class="nav-number">2.</span> <span class="nav-text">何时触发GC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哪些内存被GC"><span class="nav-number">3.</span> <span class="nav-text">哪些内存被GC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引用计数算法"><span class="nav-number">3.1.</span> <span class="nav-text">引用计数算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可达性分析算法"><span class="nav-number">3.2.</span> <span class="nav-text">可达性分析算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生存还是死亡"><span class="nav-number">3.4.</span> <span class="nav-text">生存还是死亡</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样回收这些内存"><span class="nav-number">4.</span> <span class="nav-text">怎样回收这些内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾收集算法"><span class="nav-number">4.1.</span> <span class="nav-text">垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-清除算法"><span class="nav-number">4.1.1.</span> <span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制算法"><span class="nav-number">4.1.2.</span> <span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-整理算法"><span class="nav-number">4.1.3.</span> <span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分代收集算法"><span class="nav-number">4.1.4.</span> <span class="nav-text">分代收集算法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
