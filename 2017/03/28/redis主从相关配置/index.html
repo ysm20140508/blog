@@ -118,7 +118,7 @@ slave断开连接一段时间,slave能再次从master同步部分数据,需要�
 复制是自动的,不需要用户干预,slave会自动连接master并再次同步  
 
 masterauth 如果master是要授权访问,master会在开始复制同步">
-<meta property="og:updated_time" content="2017-03-27T17:31:45.578Z">
+<meta property="og:updated_time" content="2017-03-27T17:41:13.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis主从相关配置">
 <meta name="twitter:description" content="Master-Slaveslaveof  ip port
@@ -419,7 +419,7 @@ masterauth 如果master是要授权访问,master会在开始复制同步">
 <li>如果被设置yes slave将回复客户端的请求 但数据可能是过期的,如果是第一次同步 数据是空的</li>
 <li>如果被设置no  slave将对各种命令回复”sync with master”错误,除了info和slaveof</li>
 </ul>
-<p>&lt;– more –&gt;</p>
+<a id="more"></a>
 <h2 id="slave-read-only-yes"><a href="#slave-read-only-yes" class="headerlink" title="slave-read-only yes"></a>slave-read-only yes</h2><p>配置slave是否接受写,写slave实例存储短暂数据是有用的,因为写到slave的数据,再同步master之后<br>会被删除. 2.6版本之后 slave-read-only默认是true</p>
 <h2 id="repl-diskless-sync-no"><a href="#repl-diskless-sync-no" class="headerlink" title="repl-diskless-sync no"></a>repl-diskless-sync no</h2><p>复制同步策略: 磁盘(disk)或直接写(socket)<br>新的slave需要全量同步,rdb文件需要从master传输到slaves.这个传输有两种方式  </p>
 <ul>
